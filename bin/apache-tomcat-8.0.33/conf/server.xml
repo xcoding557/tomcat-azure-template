@@ -43,6 +43,14 @@
               description="User database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
               pathname="conf/tomcat-users.xml" />
+			  
+	   <Resource auth="Container" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" driverClassName="org.postgresql.Driver" global="jdbc/postgresql_casa"
+			  maxActive="350" maxIdle="50" maxWait="10000" minIdle="30" minEvictableIdleTimeMillis="50000"
+			  timeBetweenEvictionRunsMillis="10000"
+			  name="jdbc/postgresql_casa" password="anabatic123!@#" type="javax.sql.DataSource"
+			  url="jdbc:postgresql://dbmbanking.postgres.database.azure.com:5432/mbanking-dev-casaxcb" username="postgres@dbmbanking"/>
+		  
+			  
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share

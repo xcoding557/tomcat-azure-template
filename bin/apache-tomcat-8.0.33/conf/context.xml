@@ -33,4 +33,10 @@
     <!--
     <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
     -->
+	
+<ResourceLink name="jdbc/postgresql_casa"
+                  global="jdbc/postgresql_casa"
+                  auth="Container"
+                  type="javax.sql.DataSource"/>	
+	
 </Context>
